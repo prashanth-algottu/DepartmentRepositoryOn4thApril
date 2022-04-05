@@ -58,7 +58,7 @@ public class DepartmentController {
 	}
 	
 	@GetMapping("/userQuery/{name}")
-	public Deparment findname(String name) {
+	public Deparment findname(@PathVariable String name) {
 		return deparInterface.findname(name);
 	}
 

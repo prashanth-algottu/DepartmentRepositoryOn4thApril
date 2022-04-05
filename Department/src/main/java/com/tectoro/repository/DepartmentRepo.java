@@ -10,6 +10,7 @@ import com.tectoro.model.Deparment;
 public interface DepartmentRepo extends JpaRepository<Deparment, Integer>{
 
 	public Deparment findByName(String name);
-	@Query(value = "select * from Deparment where name=?", nativeQuery = true )
+	
+	@Query(value = "select * from Deparment where name=?" )
 	public Deparment findname(String name);
 }
